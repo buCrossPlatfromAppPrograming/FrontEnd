@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, Modal, Image } from 'react-native';
-import EasyImage from '../../assets/images/EasyImage.png';
+import EasyImage from '../../../assets/images/EasyImage.png';
 
 
 const EasyFirst = () => {

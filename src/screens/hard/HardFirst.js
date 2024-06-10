@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, Modal, Image } from 'react-native';
-import HardImage from '../../assets/images/HardImage.png';
+import HardImage from '../../../assets/images/HardImage.png';
 
 
 const HardFirst = () => {
