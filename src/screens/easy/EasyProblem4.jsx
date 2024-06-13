@@ -99,4 +99,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Problem4;
+export default EasyProblem4;
