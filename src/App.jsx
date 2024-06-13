@@ -26,16 +26,17 @@ const App = () => {
                 {/* 이지 */}
                 <Stack.Screen name='EasyFirst' component={EasyFirst}/>
                 <Stack.Screen name='EasySecond' component={EasySecond}/>
-
+                <Stack.Screen name='Easyproblem4' component={Easyproblem4}/>
                 {/* 노말 */}
                 <Stack.Screen name='NormalFirst'  component={NormalFirst}/>
                 <Stack.Screen name='NormalSecond' component={Normal1}/>
-
+                <Stack.Screen name='Normal4' component={Normal4}/>
                 {/* 하드 */}
                 <Stack.Screen name='Hard1' component={Hard1}/>
                 <Stack.Screen name='Hard1-1' component={Hard1_1}/>
                 <Stack.Screen name='Hard1-2'  component={Hard1_2}/>
                 <Stack.Screen name='Hard1-3'  component={Hard1_3}/>
+                <Stack.Screen name='Hard4' component={Hard4}/>
 
             </Stack.Navigator>
         </NavigationContainer>
