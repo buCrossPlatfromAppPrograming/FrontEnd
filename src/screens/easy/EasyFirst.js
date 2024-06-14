@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, Modal, Imag
 import EasyImage from '../../../assets/images/EasyImage.png';
 
 
-const EasyFirst = () => {
+const EasyFirst = ({navigation}) => {
     const [answers, setAnswers] = useState({ q1: '', q2: '', q3: '' });
     const [hintsUsed, setHintsUsed] = useState({ q1: false, q2: false, q3: false });
     const [hintCount, setHintCount] = useState(0); // 힌트 개수 카운트
@@ -12,18 +12,6 @@ const EasyFirst = () => {
     
     const correctAnswers = { q1: '라임항공', q2: '나모델', q3: '푸른하늘' };
 
-    // useEffect(() => {
-    //     if (timeLeft === 0) {
-    //         handleTimeOut();
-    //         return;
-    //     }
-
-    //     const timerId = setInterval(() => {
-    //         setTimeLeft(timeLeft - 1);
-    //     }, 1000);
-
-    //     return () => clearInterval(timerId);
-    // }, [timeLeft]);
     useEffect(() => {
         if (prepTimeLeft > 0) {
             const prepTimerId = setInterval(() => {
@@ -61,7 +49,9 @@ const EasyFirst = () => {
 
             Alert.alert(
                 '다음 문제 풀기',
-                `맞춘 개수: ${correctCount}, 틀린 개수: ${incorrectCount}`
+                `맞춘 개수: ${correctCount}, 틀린 개수: ${incorrectCount}`,[{
+                    text:'다음 문제', onPress: ()=>{navigation.navigate('EasySecond',{time:timeLeft})}
+                }]
             );
         }
     };
@@ -98,8 +88,8 @@ const EasyFirst = () => {
 
         Alert.alert(
             '제한 시간 종료',
-            `맞춘 개수: ${correctCount}, 틀린 개수: ${incorrectCount}`
         );
+        navigation.navigate('Home');
     };
 
 

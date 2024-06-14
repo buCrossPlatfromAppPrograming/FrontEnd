@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, Alert, Modal } from 'r
 import Leftfigures from '../../../assets/images/Left.png';
 import Rightfigures from '../../../assets/images/Right.png';
 
-const NormalFirst = () => {
+const NormalFirst = ({navigation}) => {
     const [lines, setLines] = useState([]); // 그려진 선들
     const [selectedDots, setSelectedDots] = useState([]); // 선택된 점들
     const [correctLineCount, setCorrectLineCount] = useState(0); // 맞춘 선 개수
@@ -38,6 +38,7 @@ const NormalFirst = () => {
             '다음 문제 풀기',
             `맞춘 개수: ${correctLineCount}, 틀린 개수: ${incorrectLineCount}`
         );
+        navigation.navigate('NormalSecond',{time:timeLeft});
     };
 
     // '도움' 버튼 클릭했을 시

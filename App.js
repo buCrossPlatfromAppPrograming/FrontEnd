@@ -1,3 +1,2 @@
-import App from './src/QuizMain';
-
+import App from './src/App.jsx';
 export default App;
