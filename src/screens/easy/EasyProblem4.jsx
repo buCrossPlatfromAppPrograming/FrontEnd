@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
-import NextButton from "../../components/NextButton";
 
+import React, { useState } from "react";
+import { Image, StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import NextButton from "../../components/NextButton";
 
 const images = [
     { name: 'soldier', src: require('../../../assets/images/Easy3/군인.jpeg군인.jpeg'), answer: '군인' },
@@ -10,7 +10,7 @@ const images = [
     { name: 'doctor', src: require('../../../assets/images/Easy3/의사.jpeg'), answer: '의사' },
 ];
 
-const Problem4 = () => {
+const Problem4 = ({ navigation }) => {
     const [inputValues, setInputValues] = useState(['', '', '', '']);
     const correctAnswers = ['군인', '미용사', '요리사', '의사'];
     const [showResult, setShowResult] = useState(false);
@@ -49,40 +49,30 @@ const Problem4 = () => {
                 <Text>정답 확인</Text>
             </TouchableOpacity>
             {showResult && <Text style={styles.result}>정답입니다!</Text>}
-            <NextButton onPress={() => navigation.navigate('Normal4')}/>
+            <NextButton onPress={() => navigation.navigate('HomeScreen')} />
         </View>
-        
-
-        
     );
 };
 
-
 const styles = StyleSheet.create({
     container: {
-        display:'flex',
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    title: {
-        alignSelf: 'flex-start',
-        marginTop: 50,
-        marginBottom: 10,
-        fontSize: 20,
-    },
-    inputContainer: {
+    imageContainer: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
         marginTop: 20,
     },
-    inputWrapper: {
-        
+    imageWrapper: {
+        alignItems: 'center',
+        margin: 10,
     },
     image: {
         width: 100,
         height: 100,
-        margin: 10,
     },
     input: {
         height: 40,
@@ -91,11 +81,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         width: '90%',
     },
-    correct: {
+    result: {
+        marginTop: 10,
+        fontSize: 18,
+        fontWeight: 'bold',
         color: 'green',
-    },
-    incorrect: {
-        color: 'red',
     },
 });
 
