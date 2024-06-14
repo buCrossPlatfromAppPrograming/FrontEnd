@@ -1,6 +1,7 @@
+
 import React, { useEffect, useState } from "react";
 import NextButton from "../../components/NextButton";
-import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 const images = [
     { id: 1, src: require('./assets/images/Hard3/1.png') },
@@ -11,7 +12,7 @@ const images = [
     { id: 6, src: require('./assets/images/Hard3/6.png') },
 ];
 
-const Hard4 = () => {
+const Hard4 = ({ navigation }) => {
     const [patternPositions, setPatternPositions] = useState([]);
     const correctPatternIds = [1, 2, 3, 4, 5];
     const [showResult, setShowResult] = useState(false);
@@ -48,7 +49,7 @@ const Hard4 = () => {
                 ))}
             </View>
             {showResult && <Text style={styles.resultText}>정답입니다!</Text>}
-            <NextButton onPress={() => navigation.navigate('App.jsk')}/>
+            <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
         </View>
     );
 };
