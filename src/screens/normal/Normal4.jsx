@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View, Modal, Button } from "react-native";
 import NextButton from "../../components/NextButton";
+
 import { TouchableOpacity } from 'react-native';
 
 const images = [
@@ -28,7 +29,9 @@ const hintImages = [
     require('./assets/hints/휴대폰진동힌트.png'),
 ];
 
-const Game = () => {
+
+const NomalThird = ({navigation, route}) => {
+    
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedHintImage, setSelectedHintImage] = useState(null);
     const [answerIndex, setAnswerIndex] = useState(null);
@@ -66,7 +69,7 @@ const Game = () => {
             <TouchableOpacity onPress={() => setShowHint(true)}>
                 <Text>힌트 보기</Text>
             </TouchableOpacity>
-            <NextButton onPress={() => navigation.navigate('Hard4')}/>
+            <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
             <Modal visible={showHint} animationType="slide">
                 <View>
                     {selectedHintImage && <Image source={selectedHintImage} />}
