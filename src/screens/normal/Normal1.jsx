@@ -72,10 +72,14 @@ const Worksheet = ({ navigation,route }) => {
       Alert.alert("오답입니다. 다시 시도해보세요.");
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     navigation.navigate('NomalThird_sub',{time:timeLeft});
 =======
     navigation.navigate('Home');
 >>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
+=======
+    navigation.navigate('NomalThird_sub',{time:timeLeft});
+>>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
 
   };
 

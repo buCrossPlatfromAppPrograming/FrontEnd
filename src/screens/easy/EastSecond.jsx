@@ -77,18 +77,16 @@ const EasySecond = ({ navigation,route }) => {
             '제한 시간 종료',
             `맞춘 개수: ${9 - remainingAnswerCount}, 틀린 개수: ${remainingAnswerCount}`
         );
-<<<<<<< HEAD
        navigation.navigate('EasyThird',{time:timeLeft});
     };
 
     
     //다음문제 선택했을시,
 
-=======
+
         navigation.navigate('NormalFirst');
     };
 
->>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
     const provideHint = () => {
         if (hintsRemaining > 0) {
             const allResults = { ...result1, ...result2 };

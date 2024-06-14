@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View, Modal, Button } from "react-native";
 import NextButton from "../../components/NextButton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
 import { TouchableOpacity } from 'react-native';
 
 const images = [
@@ -33,6 +36,7 @@ const hintImages = [
 
 const Normal4 = ({navigation, route}) => {
     
+<<<<<<< HEAD
 =======
 import { TouchableOpacity } from 'react-native';
 
@@ -62,6 +66,8 @@ const hintImages = [
 
 const Game = () => {
 >>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
+=======
+>>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedHintImage, setSelectedHintImage] = useState(null);
     const [answerIndex, setAnswerIndex] = useState(null);
@@ -100,10 +106,14 @@ const Game = () => {
                 <Text>힌트 보기</Text>
             </TouchableOpacity>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
 =======
             <NextButton onPress={() => navigation.navigate('Hard4')}/>
 >>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
+=======
+            <NextButton onPress={() => navigation.navigate('Hard4')}/>
+>>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
             <Modal visible={showHint} animationType="slide">
                 <View>
                     {selectedHintImage && <Image source={selectedHintImage} />}

@@ -246,10 +246,15 @@ const Hard1_3 = ({navigation}) => {
             {isValid ? '금액이 유효합니다.' : '금액이 유효하지 않습니다.'}
         </Text>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <NextButton onPress={()=>{navigation.navigate('Hard4')}}/>
 =======
         <NextButton onPress={()=>{navigation.navigate('Normal1')}}/>
 >>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
+=======
+        <NextButton onPress={()=>{navigation.navigate('Hard4')}}/>
+
+>>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
     </View>
 </ScrollView>
     );
