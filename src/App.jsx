@@ -1,16 +1,24 @@
 import 'react-native-gesture-handler';
+<<<<<<< HEAD
 import { NavigationContainer, StackRouter } from "@react-navigation/native";
+=======
+import { NavigationContainer } from "@react-navigation/native";
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
 import { createStackNavigator } from "@react-navigation/stack";
 import { StyleSheet } from "react-native";
 import HomeScreen from "./HomeScreen";
 import DetailsScreen from "./DetailsScreen";
+<<<<<<< HEAD
 import Hard4 from './screens/hard/Hard4';
+=======
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
 import Hard1 from './screens/hard/Hard1';
 import Hard1_2 from './screens/hard/Hard1_2';
 import Hard1_1 from './screens/hard/Hard1_1';
 import Hard1_3 from './screens/hard/Hard1_3';
 import Normal1 from './screens/normal/Normal1';
 import NormalFirst from './screens/normal/NormalFirst';
+<<<<<<< HEAD
 import Normal4 from './screens/normal/Normal4';
 import EasyFirst from './screens/easy/EasyFirst';
 import EasySecond from './screens/easy/EastSecond';
@@ -18,6 +26,10 @@ import Problem4 from './screens/easy/EasyProblem4';
 import EasyThird from './screens/easy/EasyThird';
 import NomalThird_sub from './screens/normal/NomalThird_sub';
 import NomalThird from './screens/normal/NomalThird';
+=======
+import EasyFirst from './screens/easy/EasyFirst';
+import EasySecond from './screens/easy/EastSecond';
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
 
 
 const App = () => {
@@ -32,6 +44,7 @@ const App = () => {
                 {/* 이지 */}
                 <Stack.Screen name='EasyFirst' component={EasyFirst}/>
                 <Stack.Screen name='EasySecond' component={EasySecond}/>
+<<<<<<< HEAD
                 <Stack.Screen name ='EasyThird' component={EasyThird}/>
                 <Stack.Screen name ='EasyProblem4' component={Problem4}/>
                 {/* 노말 */}
@@ -43,6 +56,13 @@ const App = () => {
                 <Stack.Screen name='Normal4' component={Normal4}/>
 
 
+=======
+                <Stack.Screen name='Easyproblem4' component={Easyproblem4}/>
+                {/* 노말 */}
+                <Stack.Screen name='NormalFirst'  component={NormalFirst}/>
+                <Stack.Screen name='NormalSecond' component={Normal1}/>
+                <Stack.Screen name='Normal4' component={Normal4}/>
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
                 {/* 하드 */}
                 <Stack.Screen name='Hard1' component={Hard1}/>
                 <Stack.Screen name='Hard1-1' component={Hard1_1}/>
@@ -85,4 +105,8 @@ const styled = StyleSheet.create({
     }
 });
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5

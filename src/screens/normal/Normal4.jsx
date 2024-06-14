@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View, Modal, Button } from "react-native";
 import NextButton from "../../components/NextButton";
+<<<<<<< HEAD
 
 import { TouchableOpacity } from 'react-native';
 
@@ -32,6 +33,35 @@ const hintImages = [
 
 const Normal4 = ({navigation, route}) => {
     
+=======
+import { TouchableOpacity } from 'react-native';
+
+const images = [
+    require('./assets/images/Nomal3/기차.png'),
+    require('./assets/images/Nomal3/노약자.png'),
+    require('./assets/images/Nomal3/노약자석.png'),
+    require('./assets/images/Nomal3/대중교통.png'),
+    require('./assets/images/Nomal3/임산부.png'),
+    require('./assets/images/Nomal3/지하철.png'),
+    require('./assets/images/Nomal3/화장실.png'),
+    require('./assets/images/Nomal3/휴대폰 사용금지.png'),
+    require('./assets/images/Nomal3/휴대폰 진동.png'),
+];
+
+const hintImages = [
+    require('./assets/hints/기차힌트.png'),
+    require('./assets/hints/노약자힌트.png'),
+    require('./assets/hints/노약자석힌트.png'),
+    require('./assets/hints/대중교통힌트.png'),
+    require('./assets/hints/임산부힌트.png'),
+    require('./assets/hints/지하철힌트.png'),
+    require('./assets/hints/화장실힌트.png'),
+    require('./assets/hints/휴대폰사용금지힌트.png'),
+    require('./assets/hints/휴대폰진동힌트.png'),
+];
+
+const Game = () => {
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedHintImage, setSelectedHintImage] = useState(null);
     const [answerIndex, setAnswerIndex] = useState(null);
@@ -69,7 +99,11 @@ const Normal4 = ({navigation, route}) => {
             <TouchableOpacity onPress={() => setShowHint(true)}>
                 <Text>힌트 보기</Text>
             </TouchableOpacity>
+<<<<<<< HEAD
             <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
+=======
+            <NextButton onPress={() => navigation.navigate('Hard4')}/>
+>>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
             <Modal visible={showHint} animationType="slide">
                 <View>
                     {selectedHintImage && <Image source={selectedHintImage} />}
