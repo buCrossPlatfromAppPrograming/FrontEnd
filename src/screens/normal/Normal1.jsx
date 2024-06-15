@@ -32,7 +32,7 @@ const Worksheet = ({ navigation,route }) => {
     let chineseFood = getRandomInt(30000, 50000);
     let petSnack = getRandomInt(5000, 15000);
     let total = laundry + chineseFood + petSnack;
-    
+
     while (total <= allowance) {
       laundry = getRandomInt(10000, 20000);
       chineseFood = getRandomInt(30000, 50000);
@@ -71,15 +71,7 @@ const Worksheet = ({ navigation,route }) => {
     } else {
       Alert.alert("오답입니다. 다시 시도해보세요.");
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     navigation.navigate('NomalThird_sub',{time:timeLeft});
-=======
-    navigation.navigate('Home');
->>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
-=======
-    navigation.navigate('NomalThird_sub',{time:timeLeft});
->>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
 
   };
 

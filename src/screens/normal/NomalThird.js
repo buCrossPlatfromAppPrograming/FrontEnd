@@ -256,7 +256,7 @@ const NomalThird = ({navigation, route}) => {
         setCountWrongQuiz={setCountWrongQuiz}
       />
       <Footer 
-      
+
         hintCount1={hintCount1}
         hintCount2={hintCount2}
         hintCount3={hintCount3}

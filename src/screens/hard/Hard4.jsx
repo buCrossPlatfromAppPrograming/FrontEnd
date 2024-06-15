@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
 import React, { useEffect, useState } from "react";
 import NextButton from "../../components/NextButton";
 import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
@@ -17,26 +12,7 @@ const images = [
 ];
 
 const Hard4 = ({ navigation }) => {
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState } from "react";
-import NextButton from "../../components/NextButton";
-import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-const images = [
-    { id: 1, src: require('./assets/images/Hard3/1.png') },
-    { id: 2, src: require('./assets/images/Hard3/2.png') },
-    { id: 3, src: require('./assets/images/Hard3/3.png') },
-    { id: 4, src: require('./assets/images/Hard3/4.png') },
-    { id: 5, src: require('./assets/images/Hard3/5.png') },
-    { id: 6, src: require('./assets/images/Hard3/6.png') },
-];
-
-const Hard4 = () => {
->>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
-=======
-
->>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
     const [patternPositions, setPatternPositions] = useState([]);
     const correctPatternIds = [1, 2, 3, 4, 5];
     const [showResult, setShowResult] = useState(false);
@@ -73,16 +49,9 @@ const Hard4 = () => {
                 ))}
             </View>
             {showResult && <Text style={styles.resultText}>정답입니다!</Text>}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
-=======
-            <NextButton onPress={() => navigation.navigate('App.jsk')}/>
->>>>>>> 54516aac7f3a207414362a4cb039315be3b1c0b5
-=======
+
             <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
 
->>>>>>> 183fc938202e8735012dd87b6c77a3f84bbc3223
         </View>
     );
 };

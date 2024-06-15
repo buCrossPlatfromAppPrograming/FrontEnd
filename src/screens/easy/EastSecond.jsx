@@ -80,12 +80,8 @@ const EasySecond = ({ navigation,route }) => {
        navigation.navigate('EasyThird',{time:timeLeft});
     };
 
-    
+
     //다음문제 선택했을시,
-
-
-        navigation.navigate('NormalFirst');
-    };
 
     const provideHint = () => {
         if (hintsRemaining > 0) {
