@@ -1,16 +1,19 @@
-
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
 import NextButton from "../../components/NextButton";
 
+
+
 const images = [
-    { name: 'soldier', src: require('../../../assets/images/Easy3/군인.jpeg군인.jpeg'), answer: '군인' },
-    { name: 'hairdresser', src: require('../../../assets/images/Easy3/미용사.jpeg미용사.jpeg'), answer: '미용사' },
-    { name: 'chef', src: require('../../../assets/images/Easy3/요리사.jpeg'), answer: '요리사' },
-    { name: 'doctor', src: require('../../../assets/images/Easy3/의사.jpeg'), answer: '의사' },
+    { id: 'soldier', src: require('../../../assets/images/Easy3/soldier.png'), answer: '군인' },
+    { id: 'hairdresser', src: require('../../../assets/images/Easy3/hairdresser.png'), answer: '미용사' },
+    { id: 'chef', src: require('../../../assets/images/Easy3/chef.png'), answer: '요리사' },
+    { id: 'doctor', src: require('../../../assets/images/Easy3/doctor.png'), answer: '의사' },
 ];
 
-const Problem4 = ({ navigation }) => {
+const EasyProblem4 = ({ navigation, route }) => {
+
+    const [timeLeft, setTimeLeft] = useState(route.params.time);
     const [inputValues, setInputValues] = useState(['', '', '', '']);
     const correctAnswers = ['군인', '미용사', '요리사', '의사'];
     const [showResult, setShowResult] = useState(false);
@@ -28,7 +31,9 @@ const Problem4 = ({ navigation }) => {
             alert('실패');
         }
     };
-
+    const onNext= () =>{
+        navigation.navigate('Homescrin',{time:timeLeft});
+    };
     return (
         <View style={styles.container}>
             <Text>사진에 맞는 직업을 순서대로 입력해주세요.</Text>
@@ -89,4 +94,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Problem4;
+export default EasyProblem4;
