@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
 import NextButton from "../../components/NextButton";
 import { Header } from "../common/Header";
-import {Footer} from "../common/Foorer"
+
 
 const images = [
     { id: 'soldier', src: require('../../../assets/images/Easy3/soldier.png'), answer: '군인' },
