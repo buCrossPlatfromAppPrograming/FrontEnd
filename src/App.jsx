@@ -1,23 +1,23 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer, StackRouter } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { StyleSheet } from "react-native";
 import HomeScreen from "./HomeScreen";
 import DetailsScreen from "./DetailsScreen";
-import Hard4 from './screens/hard/Hard4';
 import Hard1 from './screens/hard/Hard1';
 import Hard1_2 from './screens/hard/Hard1_2';
 import Hard1_1 from './screens/hard/Hard1_1';
 import Hard1_3 from './screens/hard/Hard1_3';
 import Normal1 from './screens/normal/Normal1';
 import NormalFirst from './screens/normal/NormalFirst';
-import Normal4 from './screens/normal/Normal4';
 import EasyFirst from './screens/easy/EasyFirst';
 import EasySecond from './screens/easy/EastSecond';
-import Problem4 from './screens/easy/EasyProblem4';
 import EasyThird from './screens/easy/EasyThird';
 import NomalThird_sub from './screens/normal/NomalThird_sub';
 import NomalThird from './screens/normal/NomalThird';
+import EasyProblem4 from './screens/easy/EasyProblem4';
+import Normal4 from './screens/normal/Normal4';
+import Hard4 from './screens/hard/Hard4';
 
 const App = () => {
     const Stack = createStackNavigator();
@@ -30,15 +30,18 @@ const App = () => {
 
                 {/* 이지 */}
                 <Stack.Screen name='EasyFirst' component={EasyFirst}/>
-                <Stack.Screen name  ='EasySecond' component={EasySecond}/>
-                <Stack.Screen name ='EasyThird' component={EasyThird}/>
-                <Stack.Screen name ='EasyProblem4' component={Problem4}/>
+                <Stack.Screen name='EasySecond' component={EasySecond}/>
+                <Stack.Screen name ='EasyThird' component={EasyThird}/> 
+                <Stack.Screen name ='EasyProblem4' component={EasyProblem4}/>
                 {/* 노말 */}
                 <Stack.Screen name='NormalFirst'  component={NormalFirst}/>
                 <Stack.Screen name='NormalSecond' component={Normal1}/>
+
                 <Stack.Screen name='NomalThird_sub' component={NomalThird_sub}/>
                 <Stack.Screen name='NomalThird' component={NomalThird}/>
+
                 <Stack.Screen name='Normal4' component={Normal4}/>
+
 
                 {/* 하드 */}
                 <Stack.Screen name='Hard1' component={Hard1}/>
