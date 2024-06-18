@@ -34,6 +34,7 @@ const Hard4 = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+                <Text>태극기에 들어가는 문양 5개를 선택해 주세요.</Text>
             <View style={styles.patternContainer}>
                 {patternPositions.map((patternId, index) => (
                     <TouchableOpacity key={index} onPress={() => handlePatternDrag(index, patternId)}>
