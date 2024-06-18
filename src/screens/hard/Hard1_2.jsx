@@ -59,7 +59,7 @@ const App = ({navigation}) => {
 
     const removeFood = (index) => {
         let newFoods = [...foods];
-        const removedFood = newFoods.splice(index, 1)[0];
+        const removedFood = newFoods.splice(index, 1)[0];//i=변경시작인덳,, 제거할 요소 수
         const newTotalPrice = totalPrice - (removedFood.count * removedFood.price);
         setFoods(newFoods);
         setTotalPrice(newTotalPrice);

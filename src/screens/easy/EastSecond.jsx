@@ -5,10 +5,10 @@ import { Footer } from "../common/Footer";
 import { Header } from "../common/Header";
 
 const EasySecond = ({ navigation,route }) => {
-    const [timeLeft, setTimeLeft] = useState(route.params.time);
+    const [timeLeft, setTimeLeft] = useState(route.params.time);    //url파라미터임
 
     useEffect(() => {
-        const timer = setInterval(() => {
+        const timer = setInterval(() => {   //2번 째 인자 밀리세컨드 마다 첫 번째 인자 콜백함수 실행임
             setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
         }, 1000);
         return () => clearInterval(timer);
@@ -54,7 +54,7 @@ const EasySecond = ({ navigation,route }) => {
 
     const onChangeHandler = (name, text) => {
         setInput((prevInput) => ({
-            ...prevInput,
+            ...prevInput,   //스프레드 연산자
             [name]: text,
         }));
     };
@@ -67,7 +67,7 @@ const EasySecond = ({ navigation,route }) => {
 
     const checkAnswers = () => {
         const remaining = Object.keys(result1).filter(
-            key => input[key] !== result1[key]
+            key => input[key] !== result1[key]  //각 배열의 요소 순회 콜백
         ).length;
         const remaining2 = Object.keys(result2).filter(
             key => input2[key] !== result2[key]

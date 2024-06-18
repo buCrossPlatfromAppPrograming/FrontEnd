@@ -11,7 +11,7 @@ export default function HomeScreen({navigation}) {
       <TextWithImg title='난이도를 선택해주세요'/>
       <Btn rank='하' rate={1} onPress={() => navigation.navigate('EasyFirst')}/>
       <Btn rank='중' rate={2} onPress={()=> navigation.navigate('NormalFirst')}/>
-      <Btn rank='상' rate={3} onPress={()=> navigation.navigate('Hard1')}/>
+      <Btn rank='상' rate={3} onPress={()=> navigation.navigate('HardFirst')}/>
     </View>
   );
 }

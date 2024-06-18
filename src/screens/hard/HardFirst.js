@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet, TouchableOpacity, Alert, Modal, Imag
 import HardImage from '../../../assets/images/HardImage.png';
 
 
-const HardFirst = () => {
+const HardFirst = ({navigation}) => {
     const [answers, setAnswers] = useState({ q1: { pencil: '', eraser: '', notebook: '' }, q2: { pencil: '', eraser: '', notebook: '' } });
     const [hintsUsed, setHintsUsed] = useState({ q1: false, q2: false });
     const [hintCount, setHintCount] = useState(0); // 힌트 개수 카운트
@@ -58,6 +58,7 @@ const HardFirst = () => {
                 '다음 문제 풀기',
                 `맞춘 개수: ${correctCount}, 틀린 개수: ${incorrectCount}`
             );
+            navigation.navigate('Hard1');
         }
     };
 

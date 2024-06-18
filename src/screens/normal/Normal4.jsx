@@ -68,7 +68,7 @@ const Normal4 = ({navigation, route}) => {
             <TouchableOpacity onPress={() => setShowHint(true)}>
                 <Text>힌트 보기</Text>
             </TouchableOpacity>
-            <NextButton onPress={() => navigation.navigate('Hard4')}/>
+            <NextButton onPress={() => navigation.navigate('Home')}/>
             <Modal visible={showHint} animationType="slide">
                 <View>
                     {selectedHintImage && <Image source={selectedHintImage} />}

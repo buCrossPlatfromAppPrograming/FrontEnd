@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { StyleSheet } from "react-native";
 import HomeScreen from "./HomeScreen";
 import DetailsScreen from "./DetailsScreen";
+import HardFirst from './screens/hard/HardFirst';
 import Hard1 from './screens/hard/Hard1';
 import Hard1_2 from './screens/hard/Hard1_2';
 import Hard1_1 from './screens/hard/Hard1_1';
@@ -44,6 +45,7 @@ const App = () => {
 
 
                 {/* 하드 */}
+                <Stack.Screen name='HardFirst' component={HardFirst}/>
                 <Stack.Screen name='Hard1' component={Hard1}/>
                 <Stack.Screen name='Hard1-1' component={Hard1_1}/>
                 <Stack.Screen name='Hard1-2'  component={Hard1_2}/>

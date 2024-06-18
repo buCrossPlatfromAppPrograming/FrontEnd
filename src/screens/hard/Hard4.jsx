@@ -50,7 +50,7 @@ const Hard4 = ({ navigation }) => {
             </View>
             {showResult && <Text style={styles.resultText}>정답입니다!</Text>}
 
-            <NextButton onPress={() => navigation.navigate('HomeScreen')}/>
+            <NextButton onPress={() => navigation.navigate('Home')}/>
 
         </View>
     );

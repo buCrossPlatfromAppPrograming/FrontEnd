@@ -49,7 +49,7 @@ const Problem4 = ({ navigation }) => {
                 <Text>정답 확인</Text>
             </TouchableOpacity>
             {showResult && <Text style={styles.result}>정답입니다!</Text>}
-            <NextButton onPress={() => navigation.navigate('HomeScreen')} />
+            <NextButton onPress={() => navigation.navigate('Home')} />
         </View>
     );
 };
