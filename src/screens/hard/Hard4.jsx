@@ -4,12 +4,12 @@ import NextButton from "../../components/NextButton";
 import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 const images = [
-    { id: 1, src: require('./assets/images/Hard3/1.png') },
-    { id: 2, src: require('./assets/images/Hard3/2.png') },
-    { id: 3, src: require('./assets/images/Hard3/3.png') },
-    { id: 4, src: require('./assets/images/Hard3/4.png') },
-    { id: 5, src: require('./assets/images/Hard3/5.png') },
-    { id: 6, src: require('./assets/images/Hard3/6.png') },
+    { id: 1, src: require('../../../assets/images/Hard3/1.png') },
+    { id: 2, src: require('../../../assets/images/Hard3/2.png') },
+    { id: 3, src: require('../../../assets/images/Hard3/3.png') },
+    { id: 4, src: require('../../../assets/images/Hard3/4.png') },
+    { id: 5, src: require('../../../assets/images/Hard3/5.png') },
+    { id: 6, src: require('../../../assets/images/Hard3/6.png') },
 ];
 
 const Hard4 = ({ navigation }) => {
