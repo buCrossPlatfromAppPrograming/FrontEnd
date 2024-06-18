@@ -1,8 +1,9 @@
+
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
 import NextButton from "../../components/NextButton";
-
-
+import { Header } from "../common/Header";
+import {Footer} from "../common/Foorer"
 
 const images = [
     { id: 'soldier', src: require('../../../assets/images/Easy3/soldier.png'), answer: '군인' },
@@ -12,7 +13,6 @@ const images = [
 ];
 
 const EasyProblem4 = ({ navigation, route }) => {
-
     const [timeLeft, setTimeLeft] = useState(route.params.time);
     const [inputValues, setInputValues] = useState(['', '', '', '']);
     const correctAnswers = ['군인', '미용사', '요리사', '의사'];
@@ -31,11 +31,14 @@ const EasyProblem4 = ({ navigation, route }) => {
             alert('실패');
         }
     };
-    const onNext= () =>{
-        navigation.navigate('Homescrin',{time:timeLeft});
+
+    const onNext = () => {
+        navigation.navigate('Easyfirst', { time: timeLeft });
     };
+
     return (
         <View style={styles.container}>
+            <Header timeLeft={timeLeft} />
             <Text>사진에 맞는 직업을 순서대로 입력해주세요.</Text>
             <View style={styles.imageContainer}>
                 {images.map((img, index) => (
@@ -61,9 +64,9 @@ const EasyProblem4 = ({ navigation, route }) => {
 
 const styles = StyleSheet.create({
     container: {
-        display: 'flex',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
+        justifyContent: 'center',
     },
     imageContainer: {
         flexDirection: 'row',
